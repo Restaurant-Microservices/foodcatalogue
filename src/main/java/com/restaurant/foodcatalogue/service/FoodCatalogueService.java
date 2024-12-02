@@ -1,7 +1,6 @@
 package com.restaurant.foodcatalogue.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,13 +13,17 @@ import com.restaurant.foodcatalogue.entity.FoodItem;
 import com.restaurant.foodcatalogue.mapper.FoodItemMapper;
 import com.restaurant.foodcatalogue.repo.FoodItemRepo;
 
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class FoodCatalogueService {
 
-    @Autowired
+    @NonNull
     FoodItemRepo foodItemRepo;
 
-    @Autowired
+    @NonNull
     RestTemplate restTemplate;
 
 

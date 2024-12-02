@@ -30,7 +30,7 @@ ext {
 
 compileJava {
     options.annotationProcessorPath = configurations.annotationProcessor
-    //options.setAnnotationProcessorGeneratedSourcesDirectory(file("$projectDir/src/main/java")) 
+    //options.setAnnotationProcessorGeneratedSourcesDirectory(file("E:\\projects\\RestaurantMicroservice\\foodcatalogue\\src\\main\\java")) 
 }
 
 dependencies {
