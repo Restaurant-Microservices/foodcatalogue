@@ -13,10 +13,9 @@ java {
 	}
 }
 
-configurations {
-	compileOnly {
-		extendsFrom annotationProcessor
-	}
+compileJava {
+    options.annotationProcessorPath = configurations.annotationProcessor
+    options.setAnnotationProcessorGeneratedSourcesDirectory(file("E:\\projects\\RestaurantMicroservice\\\foodcatalogue\\src\\main\\java")) 
 }
 
 repositories {
@@ -28,10 +27,6 @@ ext {
 	set('springCloudVersion', "2024.0.0-RC1")
 }
 
-compileJava {
-    options.annotationProcessorPath = configurations.annotationProcessor
-    //options.setAnnotationProcessorGeneratedSourcesDirectory(file("E:\\projects\\RestaurantMicroservice\\foodcatalogue\\src\\main\\java")) 
-}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
